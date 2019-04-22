@@ -2,6 +2,7 @@ import asyncio
 import discord
 import datetime
 import random
+import os
 
 client = discord.Client()
 
@@ -61,5 +62,5 @@ async def on_ready():
 
             await client.send_message(message.channel, mcresult)
 
-
-client.run('NTUwMzA3MTY5MzAwNjQzODcx.D1giwA.xOKQ1WclbE9K3-2PsnojUz6Mrso')
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
